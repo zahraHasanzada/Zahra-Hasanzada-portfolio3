@@ -1,0 +1,93 @@
+.skills{
+    &_content-wrapper{
+        display:flex;
+        // grid-template-columns: repeat(3,1fr);
+        flex-wrap: wrap;
+        gap: 20px;
+     
+
+        &_inner-content{
+            // margin-bottom: 20px;
+            // flex:1;
+            // // display: flex;
+            // flex-direction: column;
+            // align-items: center;
+            flex-basis: 25%;
+            flex-grow: 1;
+             
+
+            &_category-text{
+                display: inline-block;
+                color: var(--yellow-theme-main-color);
+                font-size: 20px;
+                font-weight: 600;
+                // line-height: 1rem;
+                letter-spacing: 0.5px;
+                position: relative;
+                // text-transform: uppercase;
+                // padding: 5px 10px;
+                border-bottom: 2px solid var(--yellow-theme-main-color);
+                padding-bottom: 1px;
+                margin-bottom: 10px;
+            }
+            &_category-text::before ,  &_category-text::after{
+             position: absolute;
+             content: "";
+             width: 2px;
+             height: 5px;
+             background-color: var(--yellow-theme-main-color);
+             bottom: -1px;
+            }
+
+           &_progressbar-container{
+                width: 100%;
+            }
+            .progressbar-wrapper{
+                padding: 50px 0px 0px ;
+
+                p{
+                    font-size: 1.6rem;
+                    margin: 0 0 10px;
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    color: var(--yellow-theme-sub-text-color);
+
+                }
+            }
+        }
+    }
+}
+// .skills_content-wrapper_inner-content{
+//     display:grid;
+//     grid-template-columns: repeat(3,1fr);
+//     gap: 20px;
+// }
+
+
+
+@media only screen and (max-width : 768px){
+   .skills{
+        &_content-wrapper{
+            display: block;
+            // flex-wrap: wrap;
+            // flex-direction: column;
+            // gap: 20px;
+
+            &_inner-content{
+                // flex-basis: calc(33.33% - 20px);
+                // flex-grow: 1;
+                flex-basis: 100% ;
+                gap: 10px;
+            }
+
+        } 
+    }
+}
+    
+    // .skills_content-wrapper_inner-content{
+    //   grid-template-columns: 1fr;
+    //   gap: 0;
+        
+    // }
+
+
